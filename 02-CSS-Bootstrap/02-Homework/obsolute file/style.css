@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+}
+
+.landinghtml{
+    height:100%;
+}
+
+
+.landingPage .topsm{    
+    height:50%;
+}
+
+.landingPage .smhead1jumbo{
+    font-family: 'Comfortaa', cursive;
+    background-color: #343a40;
+    color: rgb(220, 105, 1);
+    height: 40%;
+    padding-top: 50px;
+}
+
+.landingPage .smhead1jumbo h1{
+    font-size: 20vw;
+    line-height: 0.6!important;
+}
+
+.landingPage .smhead2jumbo{
+    font-family: 'Comfortaa', cursive;
+    background-color: rgb(220, 105, 1);
+    color: whitesmoke;
+    font-size: 2rem!important;
+    height:60%;
+
+}
+
+.landingPage .topmd{
+    height:50%!important;
+    max-width: 100% !important;
+    font-family: 'Comfortaa', cursive;
+}
+
+.landingPage .toptoprow{
+    height:40%!important;
+}
+
+.landingPage .topbottomrow{
+    height:60%!important;
+}
+
+.landingPage .topmd .toptopleft{
+    background-color: #343a40;
+    color: rgb(220, 105, 1);
+    margin:0;
+    height:40%;
+}
+
+.landingPage .topmd .toptopright{
+    background-color: rgb(220, 105, 1);
+}
+
+.landingPage .topmd .topbottomleft{
+    background-color: #343a40;
+}
+
+
+.landingPage .topmd .toptopleft h1{
+    font-size: 8vw!important;
+    border-spacing: 0px;
+    padding-top: 100px;
+    line-height: 0.65!important;
+    padding-right: 30px;
+}
+
+
+.landingPage .topmd .topbottomright{
+    background-color:rgb(220, 105, 1);
+    color: whitesmoke;
+    margin:0;
+    height:60%;
+}
+
+.landingPage .topmd .topbottomright h1{
+    font-size: 5vw!important;
+    border-spacing: 0px;
+    padding-bottom: 100px;
+    line-height: 0.9!important;
+}
+
+.landingPage .bottom{
+    min-height:500px;
+}
+
+.landingPage .landingselfimg img{
+    border-radius: 50%;
+    border-style: solid;
+    border-color: rgb(220, 105, 1);
+    border-width: 2.5px;
+}
+
+.landingPage .landingtext{
+    font-family: 'Raleway', sans-serif;
+    color: rgb(220, 105, 1);
+    font-size: 1.5em;
+}
+
+.landingPage .btn-secondary{
+    background-color: rgb(220, 105, 1) ;
+    border: none;
+}
+
+.landingPage .bottom{
+    background-color: black;
+    background-image: url(landingpagebackground.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}

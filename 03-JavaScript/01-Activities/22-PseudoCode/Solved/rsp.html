@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Scissor Paper</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        // creating var for wins, draw and lose
+        var win = 0;
+        var draw = 0;
+        var lose = 0;
+
+        // set up a do-while loop to let the player keep continue
+        do{
+            // set up a for loop to repeat the games 10 times
+            for (i=0; i<10; i++){
+            // received the response from the player
+            var playerResp = prompt("Please enter 'r' for rock, 'p' for paper and 's' for scissor");
+            var playerRespLowerCase = playerResp.toLowerCase();
+                // repeat the question until the player enter r, p or s
+                while ( playerRespLowerCase !== "r" && 
+                        playerRespLowerCase !== "p" && 
+                        playerRespLowerCase !== "s" ) {
+                    alert("Please enter 'r','p' or 's' only");
+                    playerResp = prompt("Please enter 'r' for rock, 'p' for paper and 's' for scissor");
+                    playerRespLowerCase = playerResp.toLowerCase();
+                    // check the player response
+                    console.log(playerRespLowerCase);
+                }
+
+        
+            
+            // Generate a response from the computer
+                // 1. Generate a number between 0-2 for choosing r/s/p
+                    var num = Math.floor(Math.floor(Math.random() * 10)/4);
+                // 2. set up and array for the rsp
+                    rspArray = ["r","s","p"];
+                // 3. generate a response from the computer
+                    var compResp = rspArray[num];
+                    // check the comp response
+                    alert("The computer choose " + compResp);
+            
+            //When the player wins
+                if ((playerRespLowerCase === "r" && compResp ==="s") ||
+                    (playerRespLowerCase === "s" && compResp ==="p") ||
+                    (playerRespLowerCase === "p" && compResp ==="r")){
+                        win += 1;
+                        alert("you win "+ win +" times");
+                }
+                // when the player draw
+                else if(playerRespLowerCase === compResp){
+                        draw +=1;
+                        alert("you draw "+draw+" times");
+                    }   
+                    // when the player lose
+                    else {
+                        lose +=1;
+                        alert("you lose "+lose+" times");
+                    }
+                }    
+            // check with the player if he/she wants to continue to play
+            var playCont = prompt("Do you want to continue to play? (y/n)");
+            var playContLowerCase = playCont.toLowerCase();
+            while ( playCont !== "y" && 
+                    playCont !== "n") {
+                    alert("Please enter 'y' or 'n' only");
+                    playCont = prompt("Do you want to continue to play? (y/n)");
+                    playContLowerCase = playCont.toLowerCase();
+            }
+        } while(playContLowerCase !== "n");
+        
+    
+    </script>
+    
+</body>
+</html>

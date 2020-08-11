@@ -1,0 +1,48 @@
+/**
+ * Google Fonts Demo
+ **/
+
+/* Add in the Google Fonts of your choice */
+body,a {
+    font-family: 'MuseoModerno', cursive;
+}
+
+h1,
+h3,
+h4 {
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.thought2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p:last-child {
+    color: red;
+    font-size: 1.5rem;
+}
+
+p:first-of-type {
+    color: orange;
+}
+
+a:hover{
+    color:rgb(99, 99, 99);
+}
+
+a:link{
+    color:rgb(150, 149, 149);
+}
+
+a:active{
+    color: rgb(233, 210, 4);
+}
+
+a:focus{
+    background-color: rgb(40, 40, 40);
+    color: blue;
+}
+
+a:visited{
+    color:rgb(61, 61, 61);
+}

@@ -1,0 +1,18 @@
+/**
+ * Google Fonts Demo
+ **/
+
+/* Add in the Google Fonts of your choice */
+body {
+    font-family: 'MuseoModerno', cursive;
+}
+
+h1,
+h3,
+h4 {
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.thought2 {
+    font-family: 'Montserrat', sans-serif;
+}

@@ -1,0 +1,18 @@
+/**
+ * Google Fonts Demo
+ **/
+
+/* Add in the Google Fonts of your choice */
+p.thought1{
+    font-family: "Josefin Sans";
+}
+
+p.thought2{
+    font-family: "Open Sans";
+    font-style: italic;
+}
+
+p.thought3{
+    font-family: "Open Sans";
+    font-weight: 800; 
+}

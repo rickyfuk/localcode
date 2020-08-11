@@ -1,0 +1,17 @@
+.mycol1{
+    background-color: rosybrown;
+}
+
+.mycol2{
+    background-color: saddlebrown;
+}
+
+.mycol{
+    background-color: blue;
+}
+
+h1{
+    padding-left: 0.9rem;
+    /* line-height: 1.2rem; */
+    font-size: 3.3rem;
+}

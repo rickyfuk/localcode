@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascripttest</title>
+</head>
+<body>
+    <div id="test"> 
+        The following element contains some 
+        <codes>code</codes> and 
+        <italic>some text</italic>. 
+    </div>
+    
+    <script> 
+        function innerTextFn() { 
+            var x = document.getElementById('test'); 
+            console.log("innerText: " + x.innerText); 
+        } 
+  
+        function innerHTMLFn() { 
+            var x = document.getElementById('test'); 
+            console.log("innerHtml: " + x.innerHTML); 
+        } 
+
+        function textContentFn() { 
+            var x = document.getElementById('test'); 
+            console.log("textContent: " + x.textContent); 
+        } 
+
+        function outerTextFn() { 
+            var x = document.getElementById('test'); 
+            console.log("Outertext: " + x.outerText); 
+        } 
+
+        function outerHTMLFn() { 
+            var x = document.getElementById('test'); 
+            console.log("outerHtml: " + x.outerHTML); 
+        } 
+
+        innerTextFn();
+        innerHTMLFn();
+        textContentFn();
+        outerTextFn();
+        outerHTMLFn();
+
+    </script> 
+</body>
+</html>

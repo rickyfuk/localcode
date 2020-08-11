@@ -1,0 +1,15 @@
+p{
+ font-family: "Lucida Sans Pro";
+}
+
+p.bold{
+    font-weight: bold;
+}
+
+p.enlarge{
+    font-size: 24px;
+}
+
+p.increaseLineHeight{
+    line-height: 50px;
+}

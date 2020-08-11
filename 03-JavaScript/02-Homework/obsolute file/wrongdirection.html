@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <!-- CSS reset -->
+    <link rel="stylesheet" type="text/CSS" href="assets/css/reset.css">
+    <!-- BootstrapCDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@1&family=Quicksand&family=Raleway&display=swap"
+        rel="stylesheet">
+    <!-- Custom styles for the local CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- set up the container with Bootstrap Grid -->
+    <div class="container">
+        <!-- 1st row -->
+        <div class="row mx-0 mt-3">
+            <!-- the header will always occuiped the full header and in the middle of it -->
+            <div class="col-12 d-flex justify-content-center">
+                <h1>
+                    Password Generator
+                </h1>
+            </div>
+        </div>
+        <!-- 2nd row -->
+        <div class="row mt-3">
+            <!-- build the column for the password generator -->
+            <div class="col-12 border">
+                <h2 class="mt-5 d-flex justify-content-center justify-content-md-start">
+                    Generate a Password
+                </h2>
+                <!-- add a seperate line between "Generate a password" and The password box -->
+                <hr>
+                <!-- 3rd row (nested in the 2nd row) -->
+                <div class="row mx-2 passwordBox">
+                    <div class="col-12 border">
+                        <div class="d-flex justify-content-center pt-2 pb-5">
+                            Your secure password
+                        </div>
+                    </div>
+                </div>
+                <!-- add a seperate line between the password box and the button -->
+                <hr>
+                <!-- 3rd row (nested in the 2nd row) -->
+                <div class="row mx-2 my-4 buttons">
+                    <div class="d-flex justify-content-center pb-3 pb-md-0 col-12 col-md-6">
+                        <button>Generate Password</button>
+                    </div>
+                    <div class="d-flex justify-content-center col-12 col-md-6">
+                        <button>Copy to clipboard</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+
+        var num = [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9];
+        var capLetter = [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z"];
+
+        var letter = [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "i",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "o",
+            "p",
+            "q",
+            "r",
+            "s",
+            "t",
+            "u",
+            "v",
+            "w",
+            "x",
+            "y",
+            "z"];
+
+        var specialChar = [
+            "!",
+            '"',
+            "#",
+            "$",
+            "%",
+            "&",
+            "'",
+            "(",
+            ")",
+            "*",
+            "+",
+            ",",
+            "-",
+            ".",
+            "/",
+            ":",
+            ";",
+            "<",
+            "=",
+            ">",
+            "?",
+            "@",
+            "[",
+            '\\',
+            "]",
+            "^",
+            "_",
+            "`",
+            "{",
+            "|",
+            "}",
+            "~"];
+
+
+        // A function to generate a random number
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        // set an array for the password
+        var passwordArray = [];
+        // set the default password as empty
+        var password = "";
+        // prompt the question for the length requirment of the password 
+        var passwordLength = prompt("How many characters do you need? (must between 8 to 128 characters)");
+            // will keep asking until the result is between 8 to 128
+            while (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
+                alert("Please enter a number between 8 to 128 only");
+                passwordLength = prompt("How many characters do you need? (must between 8 to 128 characters)");
+            }
+        // confirm if the password need to contain any numnber
+        var needNum = confirm ("Does your password need any number?");
+        // confirm if the password need to contain any Capital Letter
+        var needCapLetter = confirm ("Does your password need any Capital Letter?");
+        // confirm if the password need to contain any Lower Case Letter
+        var needLetter = confirm ("Does your password need any Lower Case Letter?");
+        // confirm if the password need to contain any Special Character
+        var needSpecChar = confirm ("Does your password need any Special Character?");
+        // set the default check value as 0
+        var verifyFalse = 0;
+        // if all if the char type is false
+        if (
+        (needNum === false) && 
+        (needCapLetter === false) && 
+        (needLetter === false) && 
+        (needSpecChar === false)) {
+            // then the check value will change to 1
+            verifyFalse = 1;
+        }
+        else {
+            // otherwise the check value will remain as 0
+            verifyFalse = 0;
+        }
+        // when the check value is 1, an alert will pop up and ask the questions again
+        // while (verifyFalse=1){
+        //     alert("Please choose at least one of the character type. (Number/Capital Letter/Lower Case Letter/Special Character)");
+        //     needNum = confirm ("Does your password need any number?");
+        //     needCapLetter = confirm ("Does your password need any Capital Letter?");
+        //     needLetter = confirm ("Does your password need any Lower Case Letter?");
+        //     needSpecChar = confirm ("Does your password need any Special Character?");
+        //     if ((needNum === false) &&
+        //         (needCapLetter === false) && 
+        //         (needLetter === false) && 
+        //         (needSpecChar === false)) {
+        //         verifyFalse = 1;
+        //     }
+        //     else {
+        //         verifyFalse = 0;
+        //     }
+        // end of while loop
+        // }
+
+
+        // A function for generate a char from number, capital letter, lower case letter or a special char
+        function gernerateAChar() {
+            var charArray = [
+                num,
+                capLetter,
+                letter,
+                specialChar
+            ]
+
+            // Generate a random number by the getRandinInt function to decide which kind of char to produce
+            var max = charArray.length;
+            var charSelectionCount = getRandomInt(max);
+
+            // setup the if case to decide which char is going to generate in this function
+            // if the user need a number and the random number is 0, a number will be generated 
+            if (needNum === true && charSelectionCount === 0) {
+                // use num.length to control the max number as 10
+                var max = num.length;
+                // numSelectionCount is the outcome from the random number from 0 to 9
+                var numSelectionCount = getRandomInt(max);
+                // return the number from 0 to 9 according to the order of "num" array
+                return (num[numSelectionCount]);
+            }
+            // if the user need a Cap Letter and the random number is 1, a captial letter will be generated 
+            else if (needCapLetter === true && charSelectionCount === 1) {
+                // use capLetter.length to control the max number as 26
+                var max = capLetter.length;
+                // capLetterSelectionCount is the outcome from the random number from 0 to 25
+                var capLetterSelectionCount = getRandomInt(max);
+                // return the Captial Letter from 0 to 25 according to the order of "capLetter" array
+                return (capLetter[capLetterSelectionCount]);
+            }
+            // if the random number is 2, a lower case letter will be generated
+            else if (needLetter === true && charSelectionCount === 2) {
+                // use letter.length to control the max number as 26
+                var max = letter.length;
+                // letterSelectionCount is the outcome from the random number from 0 to 25
+                var letterSelectionCount = getRandomInt(max);
+                // return the lower case Letter from 0 to 25 according to the order of "letter" array
+                return (letter[letterSelectionCount]);
+            }
+            // if the random number is 3, a special char will be generated
+            else if (needSpecChar === true && charSelectionCount === 3){
+                // use specialChar.length to control the max number as 32
+                var max = specialChar.length;
+                // specialCharSelectionCount is the outcome from the random number from 0 to 31
+                var specialCharSelectionCount = getRandomInt(max);
+                // return the special char from 0 to 31 according to the order of "specialChar" array
+                return (specialChar[specialCharSelectionCount]);
+            }
+            // end of this function
+        }
+
+
+
+        // the following "for loop" is serve for: 
+        // 1. keep the result for every char generate by function "generateAChar"
+        // 2. add the new char to the password until the requirment met 
+        for (var i = 0; i < passwordLength; i++) {
+            passwordArray[i] = gernerateAChar();
+            password = password + passwordArray[i];
+            console.log(password);
+        }
+
+
+    </script>
+</body>
+
+</html>

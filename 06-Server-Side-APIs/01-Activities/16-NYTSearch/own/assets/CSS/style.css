@@ -1,0 +1,14 @@
+#topHead {
+	background-color: rgb(2, 2, 71);
+	color: white;
+	text-align: center;
+	min-height: 100px;
+}
+
+.mainContainer {
+	background-color: rgb(185, 185, 185);
+	border: 1px solid black;
+	min-height: 100px;
+	margin-top: 30px;
+	padding-bottom: 10px;
+}
