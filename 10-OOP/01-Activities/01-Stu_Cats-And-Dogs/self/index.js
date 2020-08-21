@@ -33,3 +33,7 @@ dogs.makenoice();
 cats.raining = true;
 // cats.makenoice();
 cats.makenoice();
+
+// to return the object value or keys in an array, we can use object.values or object.keys
+console.log(Object.keys(dogs));
+console.log(Object.values(cats));
