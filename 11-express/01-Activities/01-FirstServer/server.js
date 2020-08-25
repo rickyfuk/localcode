@@ -6,8 +6,8 @@ var PORT = 8080;
 
 // Create a generic function to handle requests and responses
 function handleRequest(request, response) {
-	console.log(response);
-	console.log(request);
+	// console.log(response);
+	console.log(request.url);
 
 	// Send the below string to the client when the user visits the PORT URL
 	response.end('It Works!! Path Hit: ' + request.url);
