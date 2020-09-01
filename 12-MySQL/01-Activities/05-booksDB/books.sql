@@ -48,3 +48,4 @@ LEFT JOIN authors ON books.authorId = authors.id;
 SELECT title, firstName, lastName
 FROM books
 RIGHT JOIN authors ON books.authorId = authors.id;
+
