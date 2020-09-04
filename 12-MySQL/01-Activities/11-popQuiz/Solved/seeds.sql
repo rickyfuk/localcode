@@ -14,3 +14,5 @@ VALUES ("Harvard");
 /* OR */
 INSERT INTO colleges (name)
 VALUES ("Emerson"), ("Northeastern"), ("MIT");
+
+-- SELECT * FROM boston.college;
