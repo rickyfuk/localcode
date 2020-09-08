@@ -1,0 +1,18 @@
+please make a choince
+
+Departments
+Roles
+Employees
+
+choice 1- have methods that perform the following action. 
+View
+Add
+update
+
+choice view - makes a call to the db and fetch the departmets and show list of departments. 
+
+choice 3 - Employees
+view - inner join the table and display it
+add - ask the employee name
+- make a call to db for the role
+update - 
