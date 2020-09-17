@@ -48,6 +48,16 @@ app.get('/api/characters', function (req, res) {
 	return res.json(characters);
 });
 
+// try this from server2.js
+// app.get('/:character', function (req, res) {
+// 	var chosen = req.params.character;
+
+// 	// What does this log?
+// 	console.log(chosen);
+
+// 	res.end();
+// });
+
 // What does this route do?
 app.get('/api/characters/:character', function (req, res) {
 	// What does this code do?

@@ -51,6 +51,9 @@ var orm = {
 		});
 	},
 	create: function (table, cols, vals, cb) {
+		// console.log(table);
+		// console.log(cols);
+		// console.log(vals);
 		var queryString = 'INSERT INTO ' + table;
 
 		queryString += ' (';

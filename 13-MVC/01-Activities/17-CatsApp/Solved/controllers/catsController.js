@@ -23,6 +23,7 @@ router.get('/', function (req, res) {
 });
 
 router.post('/api/cats', function (req, res) {
+	console.log(req.body);
 	cat.create(['name', 'sleepy'], [req.body.name, req.body.sleepy], function (
 		result
 	) {
