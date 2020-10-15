@@ -14,21 +14,21 @@ let arraySize = 40;
 
 let array = [];
 for (let index = 0; index < arraySize; index++) {
-  let randomNumber = Math.round(Math.random() * arraySize);
+	let randomNumber = Math.round(Math.random() * arraySize);
 
-  array.push(randomNumber);
+	array.push(randomNumber);
 }
 
 // ================================================
 // SOLUTION - Insertion Sort
 // ================================================
-
+function insertionSort(array) {}
 
 // ================================================
 // FUNCTION CALL
 // ================================================
-console.log("PRE-SORT");
-console.log(array.join(" "));
-console.log("---------------------------");
-console.log("POST-SORT");
-console.log(insertionSort(array).join(" "));
+console.log('PRE-SORT');
+console.log(array.join(' '));
+console.log('---------------------------');
+console.log('POST-SORT');
+console.log(insertionSort(array).join(' '));

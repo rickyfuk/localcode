@@ -14,9 +14,9 @@ const arraySize = 40;
 
 let array = [];
 for (let index = 0; index < arraySize; index++) {
-  let randomNumber = Math.round(Math.random() * arraySize);
+	let randomNumber = Math.round(Math.random() * arraySize);
 
-  array.push(randomNumber);
+	array.push(randomNumber);
 }
 
 // ================================================
@@ -24,22 +24,31 @@ for (let index = 0; index < arraySize; index++) {
 // ================================================
 
 function swap(items, firstIndex, secondIndex) {
-  let temp = items[firstIndex];
-  items[firstIndex] = items[secondIndex];
-  items[secondIndex] = temp;
+	let temp = items[firstIndex];
+	items[firstIndex] = items[secondIndex];
+	items[secondIndex] = temp;
 }
 
 function selectionSort(items) {
-
-  // FILL IN YOUR CODE HERE
-  // Use the above swap function when you are ready to start swapping elements in the array.
+	let min;
+	// FILL IN YOUR CODE HERE
+	// Use the above swap function when you are ready to start swapping elements in the array.
+	for (i = 0; i < items.length; i++) {
+		min = 0;
+		for (j = 0; j < items.length; j++) {
+			if (min < items[j]) {
+				min = item;
+				swap(items, items[i], items[j]);
+			}
+		}
+	}
 }
 
 // ================================================
 // FUNCTION CALL
 // ================================================
-console.log("PRE-SORT");
-console.log(array.join(" "));
-console.log("---------------------------");
-console.log("POST-SORT");
-console.log(selectionSort(array).join(" "));
+console.log('PRE-SORT');
+console.log(array.join(' '));
+console.log('---------------------------');
+console.log('POST-SORT');
+console.log(selectionSort(array).join(' '));
